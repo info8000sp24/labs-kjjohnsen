@@ -1,2 +1,4 @@
 .randominvisiblefile
 *.xlsx
+__pycache__/
+
