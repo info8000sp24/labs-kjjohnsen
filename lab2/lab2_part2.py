@@ -52,11 +52,16 @@ def __(plt, x_values, y_values):
         triangle_x = x_values[start:start+4] 
         triangle_y = y_values[start:start+4]
         # They are invalid if the first and last don't line up
-        if triangle_x[0] != triangle_x[-1] and triangle_y[0] != triangle_y[-1]:
+        if triangle_x[0] != triangle_x[-1] or triangle_y[0] != triangle_y[-1]:
             plt.plot(triangle_x,triangle_y)
         else: plt.plot(triangle_x,triangle_y,color="blue",alpha=.2)
     plt.show()
     return start, triangle_x, triangle_y
+
+
+@app.cell
+def __():
+    return
 
 
 @app.cell
